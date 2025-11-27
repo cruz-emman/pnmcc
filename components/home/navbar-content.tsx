@@ -26,7 +26,7 @@ function NavbarContent() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
+            <NavbarButton href='/sign-in' variant="secondary">Login</NavbarButton>
           </div>
         </NavBody>
  
