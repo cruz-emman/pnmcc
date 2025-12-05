@@ -9,11 +9,10 @@ const queryClient = new QueryClient({})
 export const Providers = ({
   children,
 }: {
-  //@ts-expect-error
-  children: any
+  children: React.ReactNode
 }) => (
   <QueryClientProvider client={queryClient}>
     {children}
     <ReactQueryDevtools initialIsOpen={false} />
   </QueryClientProvider>
-);
+)
