@@ -3,7 +3,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <ResetPassword />
+    <div></div>
+   // <ResetPassword />
   )
 }
 
