@@ -4,13 +4,13 @@ import { redirect } from 'next/navigation'
 
 const AuthLayoutProvider = async ({ children }: { children: React.ReactNode }) => {
 
-  const session = await auth.api.getSession({
-    headers: await headers()
-  })
+  // const session = await auth.api.getSession({
+  //   headers: await headers()
+  // })
 
-  if(session?.user.role !== "user"){
-    redirect('/')
-  }
+  // if(session?.user.role !== "user"){
+  //   redirect('/')
+  // }
 
   return (
     <main className='relative flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5'>
