@@ -5,7 +5,7 @@ import * as schema from "@/db/schema"; // Import your schema
 import { admin } from "better-auth/plugins"
 import { ServerClient } from "postmark";
 
-var client = new ServerClient(process.env.POSTMARK_API as string);
+const client = new ServerClient(process.env.POSTMARK_API as string);
 
 export const auth = betterAuth({
     database: drizzleAdapter(db, {
