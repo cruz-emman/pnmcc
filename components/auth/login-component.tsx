@@ -59,13 +59,13 @@ export function LoginComponent() {
         if (role == 'admin') {
           router.push('/main')
           toast("Login Successfully")
-        } 
-          else if (role == 'user') {
-            router.push('/dashboard')
-            toast("Login Successfully")
-          } else if (role !== 'admin' && role != 'user') {
-            toast("Unauthorized access. Admin privileges required.")
-          }
+        }
+        else if (role == 'user') {
+          router.push('/dashboard')
+          toast("Login Successfully")
+        } else if (role !== 'admin' && role != 'user') {
+          toast("Unauthorized access. Admin privileges required.")
+        }
 
         setLoading(false)
       },
@@ -80,17 +80,15 @@ export function LoginComponent() {
   }
 
   return (
-        <Card className="w-full max-w-md mx-auto">
-
+    <Card className="w-full max-w-md mx-auto">
       <CardHeader className="space-y-1">
         <div className='flex items-center justify-center'>
-       
+
         </div>
         <CardTitle className="text-2xl font-bold text-center">Sign In</CardTitle>
         <CardDescription className="text-center">            Welcome back! Please sign in to continue.
         </CardDescription>
       </CardHeader>
-
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -137,7 +135,7 @@ export function LoginComponent() {
       <CardFooter className='flex flex-col justify-center'>
         <p className='text-sm text-muted-foreground'>
           Don&apos;t have an account yet?{' '} contact: email@email.com
-          
+
         </p>
         <p className='text-sm text-muted-foreground'>
           Forgot Password?{' '}
