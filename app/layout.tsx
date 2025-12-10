@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PNMCC",
+  title: "TRIICON",
 };
 
 export default function RootLayout({

@@ -1,0 +1,83 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="humanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4a460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cd853f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="robotGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e5c8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Human Arm -->
+  <line x1="40" y1="150" x2="120" y2="150" stroke="#cd853f" stroke-width="25" stroke-linecap="round"/>
+
+  <!-- Human Hand -->
+  <g id="humanHand">
+    <!-- Palm -->
+    <ellipse cx="160" cy="150" rx="35" ry="40" fill="url(#humanGradient)"/>
+    
+    <!-- Thumb -->
+    <path d="M 145 130 Q 120 120 115 140" stroke="url(#humanGradient)" stroke-width="12" fill="none" stroke-linecap="round"/>
+    
+    <!-- Fingers -->
+    <path d="M 150 110 Q 150 80 155 60" stroke="url(#humanGradient)" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M 160 105 Q 162 70 168 45" stroke="url(#humanGradient)" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M 170 105 Q 175 70 183 45" stroke="url(#humanGradient)" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M 180 108 Q 190 78 200 55" stroke="url(#humanGradient)" stroke-width="11" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Robot Arm -->
+  <line x1="360" y1="150" x2="280" y2="150" stroke="#2e5c8a" stroke-width="25" stroke-linecap="round"/>
+  <circle cx="355" cy="150" r="8" fill="#1a3a52"/>
+
+  <!-- Robot Hand -->
+  <g id="robotHand">
+    <!-- Palm base -->
+    <rect x="220" y="120" width="40" height="60" rx="5" fill="url(#robotGradient)"/>
+    
+    <!-- Metal plating effect -->
+    <line x1="225" y1="125" x2="255" y2="125" stroke="#5ab4ff" stroke-width="2" opacity="0.6"/>
+    <line x1="225" y1="145" x2="255" y2="145" stroke="#5ab4ff" stroke-width="2" opacity="0.6"/>
+    <line x1="225" y1="165" x2="255" y2="165" stroke="#5ab4ff" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Thumb -->
+    <rect x="195" y="135" width="30" height="15" rx="7" fill="url(#robotGradient)"/>
+    <circle cx="198" cy="142" r="3" fill="#1a3a52"/>
+    <circle cx="218" cy="142" r="3" fill="#1a3a52"/>
+    
+    <!-- Fingers -->
+    <rect x="215" y="100" width="12" height="25" rx="6" fill="url(#robotGradient)"/>
+    <circle cx="221" cy="104" r="2.5" fill="#1a3a52"/>
+    <circle cx="221" cy="118" r="2.5" fill="#1a3a52"/>
+    
+    <rect x="230" y="90" width="12" height="35" rx="6" fill="url(#robotGradient)"/>
+    <circle cx="236" cy="95" r="2.5" fill="#1a3a52"/>
+    <circle cx="236" cy="115" r="2.5" fill="#1a3a52"/>
+    
+    <rect x="245" y="95" width="12" height="30" rx="6" fill="url(#robotGradient)"/>
+    <circle cx="251" cy="100" r="2.5" fill="#1a3a52"/>
+    <circle cx="251" cy="120" r="2.5" fill="#1a3a52"/>
+    
+    <rect x="260" y="105" width="12" height="20" rx="6" fill="url(#robotGradient)"/>
+    <circle cx="266" cy="110" r="2.5" fill="#1a3a52"/>
+    <circle cx="266" cy="123" r="2.5" fill="#1a3a52"/>
+  </g>
+
+  <!-- Handshake highlight (where hands meet) -->
+  <ellipse cx="190" cy="150" rx="20" ry="25" fill="white" opacity="0.3"/>
+
+  <!-- Text -->
+  <text x="200" y="280" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e5c8a" font-family="Arial, sans-serif">
+    Human-AI Partnership
+  </text>
+</svg>

@@ -1,11 +1,13 @@
 "use client"
 import React from 'react'
 import { motion } from "motion/react";
+import { Badge } from '../ui/badge';
+import WorldMap from '../ui/world-map';
 
 
 export const HeaderContent = () => {
     return (
-        <div className='pb-20 pt-36'>
+        <div className='pb-10 pt-36'>
             <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
                 <div className="absolute top-0 h-40 w-px bg-linear-to-b from-transparent via-blue-500 to-transparent" />
             </div>
@@ -16,8 +18,9 @@ export const HeaderContent = () => {
                 <div className="absolute mx-auto h-px w-40 bg-linear-to-r from-transparent via-blue-500 to-transparent" />
             </div>
             <div className="px-4 py-10 md:py-20">
-                <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
-                    {"Philippine Network of Microbial Culture Collections"
+
+                <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300 md:pb-5">
+                    {"Trinity International Congress 2026"
                         .split(" ")
                         .map((word, index) => (
                             <motion.span
@@ -35,7 +38,7 @@ export const HeaderContent = () => {
                             </motion.span>
                         ))}
                 </h1>
-                <motion.p
+                <motion.div
                     initial={{
                         opacity: 0,
                     }}
@@ -46,10 +49,11 @@ export const HeaderContent = () => {
                         duration: 0.3,
                         delay: 0.8,
                     }}
-                    className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+                    className="relative z-10 mx-auto max-w-xl py-4 text-center text-3xl font-normal text-neutral-600 dark:text-neutral-400"
                 >
-                    The Philippine Network of Microbial Culture Collections brings together institutions to safeguard microbial biodiversity and promote its use in science and innovation.
-                </motion.p>
+                    Beyond Disruptions:
+                    The Human-AI Synergy and the New Blueprint for Success in the Humanities, Sciences, and Business.
+                </motion.div>
                 <motion.div
                     initial={{
                         opacity: 0,
@@ -88,12 +92,60 @@ export const HeaderContent = () => {
                     className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
                 >
                     <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
-                        <img
-                            src="/header.jpg"
-                            alt="Landing page preview"
-                            className="aspect-[16/9] h-auto w-full object-cover"
-                            height={1000}
-                            width={1000}
+                        <WorldMap
+                            dots={[
+                                {
+                                    start: {
+                                        lat: -5.0583,
+                                        lng: 108.2772,
+                                    }, // Vietnam
+                                    end: {
+                                        lat: -5.8797,
+                                        lng: 125.7740,
+                                    }, // Philippines
+                                },
+                                {
+                                    start: {
+                                        lat: 5.0583,
+                                        lng: 120.2772,
+                                    }, // Taiwan
+                                    end: {
+                                        lat: -5.8797,
+                                        lng: 125.7740,
+                                    }, // Philippines
+                                },
+                                {
+                                    start: {
+                                        lat: 23.0583,
+                                        lng: 137.2772,
+                                    }, // Japan
+                                    end: {
+                                        lat: -5.8797,
+                                        lng: 125.7740,
+                                    }, // Philippines
+                                },
+                                {
+                                    start: {
+                                        lat: -14.0583,
+                                        lng: 100.2772,
+                                    }, // Indoneisa
+                                    end: {
+                                        lat: -5.8797,
+                                        lng: 125.7740,
+                                    }, // Philippines
+                                },
+                                {
+                                    start: {
+                                        lat: 5.0583,
+                                        lng: 80.2772,
+                                    }, // India
+                                    end: {
+                                        lat: -5.8797,
+                                        lng: 125.7740,
+                                    }, // Philippines
+                                },
+                              
+                            ]}
                         />
                     </div>
                 </motion.div>

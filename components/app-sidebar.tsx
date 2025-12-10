@@ -1,5 +1,4 @@
 "use client"
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -13,13 +12,14 @@ import {
 import { Button } from "./ui/button"
 import { authClient } from "@/lib/auth-client"
 import { useRouter } from "next/navigation"
+import { IconHome2 } from "@tabler/icons-react"
 
 // Menu items.
 const items = [
   {
     title: "Home",
     url: "#",
-    icon: Home,
+    icon: IconHome2,
   },
 
 ]
