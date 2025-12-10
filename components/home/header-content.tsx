@@ -7,7 +7,7 @@ import WorldMap from '../ui/world-map';
 
 export const HeaderContent = () => {
     return (
-        <div className='pb-10 pt-36'>
+        <div className='pb-10 pt-36' id="home">
             <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
                 <div className="absolute top-0 h-40 w-px bg-linear-to-b from-transparent via-blue-500 to-transparent" />
             </div>

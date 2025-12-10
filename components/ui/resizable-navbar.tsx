@@ -6,6 +6,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
+  animate,
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
@@ -116,6 +117,27 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
+  const motionScrollTo = (targetEl: Element, offset: number = 0) => {
+    const targetY = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+
+  animate(window.scrollY, targetY, {
+      duration: 0.9,
+      ease: "easeInOut",
+      onUpdate: (latest) => window.scrollTo(0, latest),
+    });
+  }
+
+    const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    link: string
+  ) => {
+    e.preventDefault();
+    const el = document.querySelector(link);
+    if (el) motionScrollTo(el, 80);
+    if (onItemClick) onItemClick();
+  };
+
+
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
@@ -127,7 +149,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       {items.map((item, idx) => (
         <a
           onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
+          onClick={(e) => handleClick(e, item.link)}
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}

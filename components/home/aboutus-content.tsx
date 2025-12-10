@@ -53,8 +53,8 @@ export const AboutUsContent = () => {
                 duration: 0.3,
                 delay: 0.8,
             }}
-            className='py-10 relative flex items-center flex-col gap-2 ' id="about">
-            <h2 className='text-4xl font-semibold tracking-tight pb-10'>Vision, Mission and Aims</h2>
+            className='py-10 relative flex items-center flex-col gap-2 ' >
+            <h2 className='text-4xl font-semibold tracking-tight pb-10' id="aim">Vision, Mission and Aims</h2>
             <section className='relative w-full flex items-center justify-center '>
                 <Image
                     alt='svg'
@@ -97,9 +97,9 @@ export const AboutUsContent = () => {
 
                 </div>
             </section>
-            <section className="w-full pt-50">
+            <section className="w-full pt-50" >
 
-                <div className="max-w-4xl mx-auto text-center mb-16">
+                <div className="max-w-4xl mx-auto text-center mb-16" id="about">
                     <h2 className="text-4xl font-semibold tracking-tight">
                         The Future of Human–AI Collaboration
                     </h2>
