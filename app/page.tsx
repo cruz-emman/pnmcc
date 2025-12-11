@@ -3,6 +3,7 @@ import FooterContent from '@/components/home/footer-content'
 import { HeaderContent } from '@/components/home/header-content'
 import NavbarContent from '@/components/home/navbar-content'
 import { PartnershipContent } from '@/components/home/partnership-content'
+import { navItems } from '@/data'
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
 
         {/* NAVBAR */}
         <div className="px-2 sm:px-0">
-          <NavbarContent />
+          <NavbarContent items={navItems} />
         </div>
 
         {/* HEADER / HERO SECTION */}
