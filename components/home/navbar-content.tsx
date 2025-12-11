@@ -11,9 +11,18 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { navItems } from '@/data';
 
-function NavbarContent() {
+
+interface NavbarProps {
+  name: string;
+  link: string;
+}
+
+interface Props {
+  items: NavbarProps[]
+}
+
+function NavbarContent({items}: Props) {
    
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,7 +33,7 @@ function NavbarContent() {
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
-          <NavItems items={navItems} />
+          <NavItems items={items} />
           <div className="flex items-center gap-4">
             {/* <NavbarButton href='/sign-in' variant="secondary">Login</NavbarButton> */}
           </div>
@@ -44,7 +53,7 @@ function NavbarContent() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => (
+            {items.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
                 href={item.link}

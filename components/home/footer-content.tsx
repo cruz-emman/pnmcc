@@ -18,7 +18,7 @@ export default function FooterContent() {
           <div className="space-y-3">
             <h4 className=" text-blue-900 text-2xl font-bold">Contact Us</h4>
             <p className="text-xl leading-relaxed">
-              Email: <a href="trinitycongress2026@tua.edu.ph" className="underline">trinitycongress2026@tua.edu.ph</a> <br />
+              Email: <a href="triicon@tua.edu.ph" className="underline">triicon@tua.edu.ph</a> <br />
           
             </p>
           </div>

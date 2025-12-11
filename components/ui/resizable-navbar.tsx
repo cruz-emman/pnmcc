@@ -127,14 +127,24 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     });
   }
 
-    const handleClick = (
+  const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     link: string
   ) => {
-    e.preventDefault();
-    const el = document.querySelector(link);
-    if (el) motionScrollTo(el, 80);
-    if (onItemClick) onItemClick();
+    // CASE 1: Same-page scroll (#section)
+    if (link.startsWith("#")) {
+      const el = document.querySelector(link);
+
+      if (el) {
+        e.preventDefault();     // Stop page reload
+        motionScrollTo(el, 80); // Smooth scrolling
+        if (onItemClick) onItemClick();
+        return;
+      }
+    }
+
+    // CASE 2: Element does not exist OR normal link → Allow page navigation
+    // Do NOT preventDefault()
   };
 
 
